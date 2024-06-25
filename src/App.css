@@ -1,0 +1,15 @@
+.bgFirstSection {
+  background-image: url("./assets/images/firstSection.png") !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bgAboutUs {
+  background-image: url("./assets/images/aboutUs.jpg") !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+}
+
+.linkBorder {
+  border-bottom: 1px solid #faad48 !important;
+}
