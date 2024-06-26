@@ -1,3 +1,10 @@
+import product1 from "./assets/images/product1.jpg";
+import product2 from "./assets/images/product2.jpg";
+import product3 from "./assets/images/product3.jpg";
+import product4 from "./assets/images/product4.jpg";
+import product5 from "./assets/images/product5.jpg";
+import product6 from "./assets/images/product6.jpg";
+
 export const navLinks = [
   {
     name: "Home",
@@ -114,25 +121,29 @@ export const developersData = [
   },
 ];
 
-export const projectsData = [
+export const ProductssData = [
   {
-    CardTitle: "Residential",
-    image:
-      "https://realestate.eg/ckfinder/userfiles/images/The-Square-compound-1/%D9%88%D8%AD%D8%AF%D8%A7%D8%AA-%D9%83%D9%85%D8%A8%D9%88%D9%86%D8%AF-%D8%B0%D8%A7-%D8%B3%D9%83%D9%88%D9%8A%D8%B1.jpeg",
+    CardTitle: "Kemapoxy Epoxy Hardeners",
+    image: product1,
   },
   {
-    CardTitle: "Administrative",
-    image:
-      "https://realestate.eg/ckfinder/userfiles/images/The-Square-compound-1/Apartment-for-sale-in-The-Square-compound.jpg",
+    CardTitle: "Kemapoxy Epoxy Resin",
+    image: product2,
   },
   {
-    CardTitle: "Commercial",
-    image:
-      "https://realestate.eg/ckfinder/userfiles/images/The-Square-compound-1/%D8%AD%D8%AF%D8%A7%D8%A6%D9%82-%D9%83%D9%85%D8%A8%D9%88%D9%86%D8%AF-%D8%B0%D8%A7-%D8%B3%D9%83%D9%88%D9%8A%D8%B1.jpg",
+    CardTitle: "Kemapoxy Epoxy Modifires",
+    image: product3,
   },
   {
-    CardTitle: "Coastal",
-    image:
-      "https://cybercraftinc.com/wp-content/uploads/2019/04/r-architecture-2gdwliim3uw-unsplash-1-scaled.webp",
+    CardTitle: "Kemapoxy Polycarbonate System",
+    image: product4,
+  },
+  {
+    CardTitle: "Acel Resin and Hardeners",
+    image: product5,
+  },
+  {
+    CardTitle: "Row Matrial",
+    image: product6,
   },
 ];

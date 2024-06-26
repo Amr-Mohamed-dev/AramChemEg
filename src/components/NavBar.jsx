@@ -52,7 +52,7 @@ export default function Example() {
         </Popover.Group>
         <NavLink
           to={"/contact-us"}
-          className="hidden lg:block text-[16px] font-semibold lg:ml-10 py-1 px-3 bg-primary rounded-md leading-6 text-gray-100 hover:bg-secondary transition duration-300 ease-in-out"
+          className="hidden lg:block text-[16px] font-semibold lg:ml-10 py-1 px-3 bg-primary rounded-md leading-6 text-gray-100 hover:bg-secondary hover:text-black transition duration-300 ease-in-out"
         >
           Contact Us
         </NavLink>
@@ -70,8 +70,9 @@ export default function Example() {
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full h-[45%] overflow-y-auto bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-400/10">
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5 flex items-center gap-2">
-              {logo}
-              <span className="text-white font-bold text-[20px]">Scouts</span>
+              <span className="text-white font-bold text-[20px]">
+                Aram <span className=""> Chem </span>
+              </span>
             </a>
             <button
               type="button"
@@ -106,7 +107,7 @@ export default function Example() {
               ))}
               <NavLink
                 to={"/contact-us"}
-                className="block mt-2 mx-auto w-fit text-[14px] font-semibold py-1 px-3 bg-primary rounded-md leading-6 text-gray-100 hover:bg-secondary transition duration-300 ease-in-out"
+                className="block mt-2 mx-auto w-fit text-[14px] font-semibold py-1 px-3 bg-primary rounded-md leading-6 text-gray-100 hover:bg-secondary hover:text-black transition duration-300 ease-in-out"
               >
                 Contact Us
               </NavLink>
