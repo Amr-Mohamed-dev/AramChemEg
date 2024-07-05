@@ -1,7 +1,7 @@
 const NewsLetter = () => {
   return (
-    <section className="bg-white ">
-      <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
+    <section className="md:px-[3vw]">
+      <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16  ">
         <div className="mx-auto sm:text-center flex items-center justify-between flex-wrap">
           <div>
             <h2 className="mb-4 text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl ">

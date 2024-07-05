@@ -13,6 +13,7 @@ import "./App.css";
 import { AnimatePresence } from "framer-motion";
 import Projects from "./pages/Projects/Projects.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
+import Hr from "./components/Hr.jsx";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             element={
               <>
                 <NavBar />
+                <Hr />
                 <Home />
                 <Footer />
               </>

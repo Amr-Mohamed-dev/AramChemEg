@@ -3,6 +3,7 @@ import PagesHeader from "../../components/PagesHeader";
 import Dots from "./Dots";
 import { motion } from "framer-motion";
 import { Statistic } from "../../components/Status";
+import { NavLink } from "react-router-dom";
 
 const AboutUs = () => {
   return (
@@ -53,10 +54,10 @@ const AboutUs = () => {
 
             <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
               <div className="mt-10 lg:mt-0">
-                <span className="block mb-4 text-lg font-semibold text-primary">
+                <span className="block mb-2 text-[25px] font-semibold text-primary">
                   Why Choose Us
                 </span>
-                <h2 className="mb-5 text-3xl font-bold text-dark dark:text-white sm:text-[40px]/[48px]">
+                <h2 className="mb-5 text-3xl font-bold text-dark sm:text-[40px]/[48px]">
                   Make your customers happy by giving services.
                 </h2>
                 <p className="mb-5 text-base text-body-color dark:text-dark-6">
@@ -69,12 +70,12 @@ const AboutUs = () => {
                   brand. Secure a consistent brand image with a domain name that
                   matches your business.
                 </p>
-                <botton
-                  href="javascript:void(0)"
-                  className="inline-flex items-center justify-center py-3 text-base font-medium text-center text-black border border-transparent rounded-md px-7 bg-black/15 hover:bg-opacity-90"
+                <NavLink
+                  to={"/contact-us"}
+                  className="inline-flex items-center justify-center py-3 text-base font-medium text-center text-black border border-transparent rounded-md px-7 bg-black/15 hover:bg-primary hover:text-white duration-300"
                 >
                   Get Started
-                </botton>
+                </NavLink>
               </div>
             </div>
           </div>
@@ -87,8 +88,7 @@ const AboutUs = () => {
       <div className="pb-10">
         <OurTeam />
       </div>
-      <hr className="border-b-2 border-gray-600 w-[70%] mx-auto" />
-      <div className=" 2xl:mx-auto lg:py-4 lg:px-20 md:py-12 md:px-6 py-9 px-4">
+      {/* <div className=" 2xl:mx-auto lg:py-4 lg:px-20 md:py-12 md:px-6 py-9 px-4">
         <div className="flex lg:flex-row flex-col justify-between gap-8 pt-12">
           <div className="w-full lg:w-5/12 flex flex-col justify-center">
             <h1 className="text-3xl lg:text-4xl font-bold leading-9 text-gray-800 pb-4">
@@ -169,7 +169,7 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </motion.div>
   );
 };

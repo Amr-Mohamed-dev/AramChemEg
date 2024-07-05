@@ -3,7 +3,7 @@ export const Statistic = () => {
     <div className="bg-black py-4">
       <div className="text-center text-white pb-3">
         <h1 className="text-3xl font-semibold uppercase pb-6">
-          We gorw every day
+          We grow every day
         </h1>
         <p className="text-white/60">
           Here is the numbers of our success partners

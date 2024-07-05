@@ -5,7 +5,7 @@ function OurTeam() {
     <div>
       <div className="container flex justify-center mx-auto pt-16">
         <div>
-          <p className="text-secondary text-[40px] text-center pb-3 lg:text-[50px] font-semibold lg:pb-10">
+          <p className="text-primary text-[40px] text-center pb-3 lg:text-[50px] font-semibold lg:pb-10">
             OUR TEAM
           </p>
           <h1 className="lg:text-4xl text-[20px] text-center text-gray-800 font-extrabold pb-6 sm:w-4/6 w-5/6 mx-auto">
@@ -47,36 +47,7 @@ function OurTeam() {
                 "Our services encompass the assessment and repair of property damage caused by water, fire, smoke, or mold. We can also be a part of the restoration.   "
               }
             />
-            <TeamCard
-              title={"Principal Software Engineer"}
-              profileImg={
-                "https://cdn.tuk.dev/assets/boy-smiling_23-2148155640.jpg"
-              }
-              name={"Dean Jones"}
-              desc={
-                "An avid open-source developer who loves to be creative and inventive. I have 20 years of experience in the field. He is a part of the team. "
-              }
-            />
-            <TeamCard
-              title={"Product Design Head"}
-              profileImg={
-                "https://cdn.tuk.dev/assets/blond-man-happy-expression_1194-2873.jpg"
-              }
-              name={"Rachel Adams"}
-              desc={
-                "Product designer with interests in immersive computing and XR, political ventures, and emerging technologies. Able to take ideas and give them a life."
-              }
-            />
-            <TeamCard
-              title={"UX Designer"}
-              profileImg={
-                "https://cdn.tuk.dev/assets/photo-1570211776045-af3a51026f4a.jfif"
-              }
-              name={"Charles Keith"}
-              desc={
-                "A UX designer is the voice of the customer. Our job is to look beyond the business goals. We don't just experience user interface but also questions it."
-              }
-            />
+
             {/* <TeamCard title={""} profileImg={""} name={""} desc={""} /> */}
           </div>
         </div>

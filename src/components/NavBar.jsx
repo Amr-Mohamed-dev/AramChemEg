@@ -3,29 +3,30 @@ import { Dialog, Popover } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { navLinks } from "../db";
 import { NavLink } from "react-router-dom";
-import { logo } from "../svg";
+import LogoName from "./LogoName";
+// import logo from "../assets/images/logo.jpeg";
+
 // import { PhoneIcon, PlayCircleIcon } from "@heroicons/react/20/solid";
 
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className=" text-white w-full bg-black/95 ">
+    <header className=" text-black w-full bg-white lg:px-[3vw] ">
       <nav
-        className="mx-auto flex max-w-7xl md:mx-[300px] lg:max-w-[85%] items-center justify-between p-6 lg:px-8"
+        className="mx-auto flex max-w-7xl lg:max-w-[85%] items-center justify-between p-4 lg:px-8"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5 flex items-center gap-2">
-            <span className="text-white font-bold text-[20px] lg:text-[25px]">
-              Aram <span className=""> Chem </span>
-            </span>
+            {/* <img src={logo} alt="" className="w-[50px] h-[50px]"/>  */}
+            <LogoName />
           </a>
         </div>
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-300"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-black"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
@@ -41,8 +42,8 @@ export default function Example() {
                 return (
                   "text-sm font-semibold leading-6 " +
                   (isActive
-                    ? " text-gray-100 border-b-2 border-primary transition duration-300 ease-in-out"
-                    : " text-gray-500 hover:text-gray-300  transition duration-300 ease-in-out")
+                    ? " text-primary border-b-2 border-primary transition duration-300 ease-in-out"
+                    : " text-black hover:text-gray-300  transition duration-300 ease-in-out")
                 );
               }}
             >
@@ -52,7 +53,7 @@ export default function Example() {
         </Popover.Group>
         <NavLink
           to={"/contact-us"}
-          className="hidden lg:block text-[16px] font-semibold lg:ml-10 py-1 px-3 bg-primary rounded-md leading-6 text-gray-100 hover:bg-secondary hover:text-black transition duration-300 ease-in-out"
+          className="hidden lg:block text-sm font-semibold lg:ml-10 py-1 px-3 bg-primary rounded-md leading-6 text-white hover:bg-secondary hover:text-black transition duration-300 ease-in-out"
         >
           Contact Us
         </NavLink>
@@ -67,7 +68,7 @@ export default function Example() {
         onClose={setMobileMenuOpen}
       >
         <div className="fixed inset-0 z-10 " />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full h-[45%] overflow-y-auto bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-400/10">
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full h-[50vh] overflow-y-auto bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-400/10">
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5 flex items-center gap-2">
               <span className="text-white font-bold text-[20px]">
@@ -107,7 +108,7 @@ export default function Example() {
               ))}
               <NavLink
                 to={"/contact-us"}
-                className="block mt-2 mx-auto w-fit text-[14px] font-semibold py-1 px-3 bg-primary rounded-md leading-6 text-gray-100 hover:bg-secondary hover:text-black transition duration-300 ease-in-out"
+                className="block mt-2 mx-auto w-fit text-sm font-semibold py-1 px-3 bg-primary rounded-md leading-6 text-white hover:bg-secondary hover:text-black transition duration-300 ease-in-out"
               >
                 Contact Us
               </NavLink>

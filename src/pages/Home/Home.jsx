@@ -1,9 +1,7 @@
 import { motion } from "framer-motion";
-import BlogSection from "./BlogSection";
 import HeroSection from "./HeroSection";
-import OurDevelopers from "./OurDevelopers";
 import OurProjects from "./OurProjects";
-import NewsLetter from "../../components/NewsLetter";
+// import NewsLetter from "../../components/NewsLetter";
 
 const Home = () => {
   return (
@@ -16,8 +14,7 @@ const Home = () => {
     >
       <HeroSection />
       <OurProjects />
-      {/* <BlogSection /> */}
-      <NewsLetter />
+      {/* <NewsLetter /> */}
     </motion.div>
   );
 };
