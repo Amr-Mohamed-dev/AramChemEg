@@ -1,5 +1,3 @@
-import { NavLink } from "react-router-dom";
-// import { Statistic } from "../../components/Status";
 import { ProductssData } from "../../db";
 import { useState } from "react";
 
@@ -21,10 +19,21 @@ const OurProjects = () => {
           {ProductssData.map((project, index) => (
             <div
               key={project.image}
-              className={`relative h-full md:w-[23vw] rounded-lg overflow-hidden shadow-sm text-center bg-projectCard`}
+              className={`relative h-full md:w-[20vw] overflow-hidden shadow-sm text-center bg-projectCard`}
               onMouseOver={() => handleHover(index)}
               onMouseOut={handleHoverOut}
             >
+              <div
+                className={`w-full absolute top-4 pb-3 z-40 md:text-[1vw] font-bold text-gray-200`}
+              >
+                <q
+                  className={`${
+                    index === hoveredIndex ? "border-b-[3px]" : "border-b-0 "
+                  } duration-200 pb-1 border-white/55`}
+                >
+                  {project.CardTitle}
+                </q>
+              </div>
               <img
                 className="w-full cursor-pointer rounded-lg h-full"
                 src={project.image}
@@ -34,10 +43,12 @@ const OurProjects = () => {
                   index === hoveredIndex ? "right-[0px]" : "right-[500px]"
                 } duration-500 bg-black/60 pt-5 flex flex-col gap-7`}
               >
-                <h1 className="pt-5 md:text-[1vw] font-bold text-gray-100">
-                  <q>{project.CardTitle}</q>
-                </h1>
-                <p className="text-gray-100 md:text-[1vw]">{project.des}</p>
+                <p className="text-gray-100 pt-12 px-4 md:text-[1.6vh]">
+                  <b className="text-md font-extrabold">
+                    {project.paragraphHeader}
+                  </b>{" "}
+                  {project.des}
+                </p>
               </div>
             </div>
           ))}

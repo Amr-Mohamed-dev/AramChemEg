@@ -14,10 +14,10 @@ export const navLinks = [
     name: "About Us",
     href: "/about-us",
   },
-  {
-    name: "Products",
-    href: "/products",
-  },
+  // {
+  //   name: "Products",
+  //   href: "/products",
+  // },
 ];
 
 export const popularResidence = [
@@ -120,31 +120,37 @@ export const developersData = [
 export const ProductssData = [
   {
     CardTitle: "Kemapoxy Epoxy Hardeners",
+    paragraphHeader: "Epoxy Hardeners",
     image: product1,
     des: "These are for the production of different types of paints, coatings, repair mortars and other construction materials based on epoxy and polyurethane modified epoxy systems.",
   },
   {
     CardTitle: "Kemapoxy Epoxy Resin",
+    paragraphHeader: "Epoxy Resin",
     image: product2,
     des: "These are for the production of different types of paints, coatings, repair mortars and other construction materials based on epoxy and polyurethane modified epoxy systems.",
   },
   {
     CardTitle: "Kemapoxy Epoxy Modifires",
+    paragraphHeader: "Epoxy Modifires",
     image: product3,
     des: "These are for the production of different types of paints, coatings, repair mortars and other construction materials based on epoxy and polyurethane modified epoxy systems.",
   },
   {
     CardTitle: "Kemapoxy Polycarbonate System",
+    paragraphHeader: "Polycarbonate System",
     image: product4,
     des: "These are for the production of different types of paints, coatings, repair mortars and other construction materials based on epoxy and polyurethane modified epoxy systems.",
   },
   {
     CardTitle: "Acel Resin and Hardeners",
+    paragraphHeader: "Acel Resin and Hardeners",
     image: product5,
     des: "These are for the production of different types of paints, coatings, repair mortars and other construction materials based on epoxy and polyurethane modified epoxy systems.",
   },
   {
     CardTitle: "Row Matrial",
+    paragraphHeader: "Row Matrial",
     image: product6,
     des: "These are for the production of different types of paints, coatings, repair mortars and other construction materials based on epoxy and polyurethane modified epoxy systems.",
   },

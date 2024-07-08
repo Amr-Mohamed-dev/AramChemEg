@@ -15,7 +15,7 @@ const AboutUs = () => {
     >
       <PagesHeader
         header={"About Us"}
-        title={"We Add We Are Scouts"}
+        title={"We Add We Are AramChem"}
         bg={"bgAboutUs"}
       />
       <section className="overflow-hidden pt-20 pb-12 px-2 lg:pt-[120px] lg:pb-[90px] bg-white dark:bg-dark">
