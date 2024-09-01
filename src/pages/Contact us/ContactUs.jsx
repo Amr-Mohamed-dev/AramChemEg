@@ -1,8 +1,29 @@
 import PagesHeader from "../../components/PagesHeader";
 import Dots from "../About us/Dots";
 import { motion } from "framer-motion";
-
+import emailjs from "emailjs-com";
 const ContactUs = () => {
+  function sendEmail() {
+    emailjs
+      .send(
+        "<YOUR_SERVICE_ID>",
+        "<YOUR_TEMPLATE_ID>",
+        {
+          to_name: "Recipient Name",
+          message: "This is the message body",
+        },
+        "<YOUR_USER_ID>"
+      )
+      .then(
+        (response) => {
+          console.log("Email sent!", response.status, response.text);
+        },
+        (error) => {
+          console.error("Error sending email:", error);
+        }
+      );
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -164,6 +185,7 @@ const ContactUs = () => {
                   <div>
                     <button
                       type="submit"
+                      onClick={sendEmail}
                       className="w-full rounded border border-primary bg-primary p-3 text-white transition hover:bg-opacity-90"
                     >
                       Send Message

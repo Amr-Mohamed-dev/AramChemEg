@@ -1,57 +1,71 @@
 import { ProductssData } from "../../db";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const OurProjects = () => {
-  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [selectedId, setSelectedId] = useState(null);
 
-  const handleHover = (index) => {
-    setHoveredIndex(index);
-  };
-
-  const handleHoverOut = () => {
-    setHoveredIndex(null);
+  const handleClickOutside = (e) => {
+    if (e.target.classList.contains("modal-overlay")) {
+      setSelectedId(null);
+    }
   };
 
   return (
     <section className="pb-10 pt-20 lg:pb-20 lg:pt-[60px] px-3">
       <div className="md:mx-[8vw]">
-        <div className="flex sm:flex-col md:flex-row flex-wrap justify-center items-center gap-4 h-full">
-          {ProductssData.map((project, index) => (
-            <div
-              key={project.image}
-              className={`relative h-full md:w-[20vw] overflow-hidden shadow-sm text-center bg-projectCard`}
-              onMouseOver={() => handleHover(index)}
-              onMouseOut={handleHoverOut}
-            >
-              <div
-                className={`w-full absolute top-4 pb-3 z-40 md:text-[1vw] font-bold text-gray-200`}
-              >
-                <q
-                  className={`${
-                    index === hoveredIndex ? "border-b-[3px]" : "border-b-0 "
-                  } duration-200 pb-1 border-white/55`}
-                >
-                  {project.CardTitle}
-                </q>
-              </div>
+        <div className="flex flex-wrap justify-center items-center gap-4 h-full">
+          {ProductssData.map((project) => (
+            <motion.div
+              key={project.id}
+              layoutId={project.id}
+              className="relative w-full md:w-[24vw] h-[320px] overflow-hidden bg-gray-100 rounded-lg shadow-lg cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl"
+              onClick={() => setSelectedId(project.id)}>
               <img
-                className="w-full cursor-pointer rounded-lg h-full"
+                className="w-full h-[200px] object-cover rounded-t-lg transition-transform duration-300 ease-in-out transform hover:rotate-2 "
                 src={project.image}
+                alt={project.CardTitle}
               />
-              <div
-                className={`absolute rounded-lg h-full w-full top-0 ${
-                  index === hoveredIndex ? "right-[0px]" : "right-[500px]"
-                } duration-500 bg-black/60 pt-5 flex flex-col gap-7`}
-              >
-                <p className="text-gray-100 pt-12 px-4 md:text-[1.6vh]">
-                  <b className="text-md font-extrabold">
-                    {project.paragraphHeader}
-                  </b>{" "}
+              <div className="absolute bottom-0 left-0 right-0 p-5  text-gray-900">
+                <h3 className="text-xl font-semibold text-[#ed1d24] truncate mb-2 leading-tight">
+                  {project.CardTitle}
+                </h3>
+                <p className="text-sm text-gray-900 truncate mt-1">
                   {project.des}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
+
+          <AnimatePresence>
+            {selectedId && (
+              <motion.div
+                layoutId={selectedId}
+                className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 modal-overlay"
+                onClick={handleClickOutside}>
+                {ProductssData.map(
+                  (project) =>
+                    project.id === selectedId && (
+                      <motion.div
+                        key={project.id}
+                        className="bg-gradient-to-br from-blue-500 via-teal-500 to-indigo-500 rounded-lg p-6 w-[90%] md:w-[40vw] text-center shadow-lg transform transition-transform hover:scale-105 hover:shadow-xl duration-300 ease-in-out">
+                        <motion.img
+                          src={project.image}
+                          alt="project"
+                          className="w-full rounded-t-lg object-cover h-40 md:h-48 mb-4"
+                        />
+                        <motion.h5 className="text-white text-lg md:text-2xl font-extrabold tracking-wide mt-2 mb-1">
+                          {project.CardTitle}
+                        </motion.h5>
+                        <motion.h2 className="text-gray-100 text-base md:text-lg font-medium italic leading-relaxed">
+                          {project.des}
+                        </motion.h2>
+                      </motion.div>
+                    )
+                )}
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </div>
     </section>
@@ -59,22 +73,3 @@ const OurProjects = () => {
 };
 
 export default OurProjects;
-
-{
-  /* <div className="absolute overflow-hidden rounded-lg h-full w-full top-0 left-0">
-<img
-  className="w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg h-full"
-  src={project.image}
-/>
-</div>
-<div className="absolute h-full w-full top-0 left-0">
-<h3 className="pt-5 text-md font-semibold text-gray-300 block">
-  {project.CardTitle}
-</h3>
-<NavLink to={"/products"}>
-  <button className="font-normal px-8 py-2 rounded-sm border-2 tracking-wider border-gray-400 text-gray-100 cursor-pointer text-sm duration-300 transition hover:bg-secondary hover:border-secondary mt-4">
-    Explore
-  </button>
-</NavLink>
-</div>? */
-}

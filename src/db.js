@@ -5,6 +5,10 @@ import product4 from "./assets/images/product4.jpg";
 import product5 from "./assets/images/product5.jpg";
 import product6 from "./assets/images/product6.jpg";
 
+import heroPic1 from "./assets/images/product1.jpg";
+import heroPic2 from "./assets/images/product2.jpg";
+import heroPic3 from "./assets/images/product3.jpg";
+
 export const navLinks = [
   {
     name: "Home",
@@ -18,6 +22,12 @@ export const navLinks = [
   //   name: "Products",
   //   href: "/products",
   // },
+];
+
+export const carouselImgs = [
+  { id: 1, img: heroPic1 },
+  { id: 2, img: heroPic2 },
+  { id: 3, img: heroPic3 },
 ];
 
 export const popularResidence = [
@@ -119,36 +129,42 @@ export const developersData = [
 
 export const ProductssData = [
   {
+    id: 1,
     CardTitle: "Kemapoxy Epoxy Hardeners",
     paragraphHeader: "Epoxy Hardeners",
     image: product1,
     des: "These are for the production of different types of paints, coatings, repair mortars and other construction materials based on epoxy and polyurethane modified epoxy systems.",
   },
   {
+    id: 2,
     CardTitle: "Kemapoxy Epoxy Resin",
     paragraphHeader: "Epoxy Resin",
     image: product2,
     des: "These are for the production of different types of paints, coatings, repair mortars and other construction materials based on epoxy and polyurethane modified epoxy systems.",
   },
   {
+    id: 3,
     CardTitle: "Kemapoxy Epoxy Modifires",
     paragraphHeader: "Epoxy Modifires",
     image: product3,
     des: "These are for the production of different types of paints, coatings, repair mortars and other construction materials based on epoxy and polyurethane modified epoxy systems.",
   },
   {
+    id: 4,
     CardTitle: "Kemapoxy Polycarbonate System",
     paragraphHeader: "Polycarbonate System",
     image: product4,
     des: "These are for the production of different types of paints, coatings, repair mortars and other construction materials based on epoxy and polyurethane modified epoxy systems.",
   },
   {
+    id: 5,
     CardTitle: "Acel Resin and Hardeners",
     paragraphHeader: "Acel Resin and Hardeners",
     image: product5,
     des: "These are for the production of different types of paints, coatings, repair mortars and other construction materials based on epoxy and polyurethane modified epoxy systems.",
   },
   {
+    id: 6,
     CardTitle: "Row Matrial",
     paragraphHeader: "Row Matrial",
     image: product6,
